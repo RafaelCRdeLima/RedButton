@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurar o botão"
+            android:textColor="#222222"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/Label"
+            android:text="Nome de quem recebe a ligação" />
+        <EditText
+            android:id="@+id/contact_name"
+            style="@style/Field"
+            android:hint="ex.: Rafael"
+            android:inputType="textPersonName|textCapWords" />
+
+        <TextView
+            style="@style/Label"
+            android:text="Número com DDD" />
+        <EditText
+            android:id="@+id/number"
+            style="@style/Field"
+            android:hint="ex.: 47 99999-8888"
+            android:inputType="phone" />
+
+        <TextView
+            style="@style/Label"
+            android:text="Como ela aparece na mensagem" />
+        <EditText
+            android:id="@+id/sender_name"
+            style="@style/Field"
+            android:hint="ex.: Mãe"
+            android:inputType="textPersonName|textCapWords" />
+
+        <CheckBox
+            android:id="@+id/send_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Mandar a localização junto"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/save"
+            style="@style/Action"
+            android:text="Salvar e dar as permissões" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#222222"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/test_sms"
+            style="@style/Action"
+            android:text="Testar só a mensagem (não liga)" />
+
+        <Button
+            android:id="@+id/add_widget"
+            style="@style/Action"
+            android:text="Pôr o botão na tela inicial" />
+
+        <Button
+            android:id="@+id/keep_permissions"
+            style="@style/Action"
+            android:text="Não remover as permissões se não usar" />
+
+        <Button
+            android:id="@+id/app_settings"
+            style="@style/Action"
+            android:text="Abrir permissões do app" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="#555555"
+            android:textSize="15sp"
+            android:text="Dicas:\n• Na localização, escolha &quot;Durante o uso do app&quot; (não &quot;Só esta vez&quot;) e deixe a localização do celular ligada.\n• Se a permissão de SMS aparecer bloqueada (&quot;configuração restrita&quot;): Abrir permissões do app → menu ⋮ no canto → Permitir configurações restritas, e dê a permissão de novo.\n• Em celular com dois chips, escolha um chip padrão para ligações e SMS, senão o Android pergunta qual usar.\n• Esta tela só abre segurando o dedo em &quot;Configurações&quot;, na tela do botão." />
+    </LinearLayout>
+</ScrollView>
