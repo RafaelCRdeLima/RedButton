@@ -23,7 +23,27 @@ Ou aponte a câmera do celular para o código abaixo:
 
 ## Instalar
 
+### Pelo cabo USB (recomendado)
+
+Esse é o caminho que funciona sempre. Instalar pelo cabo fica fora da verificação de
+desenvolvedor que o Android aplica no Brasil desde 30/09/2026, e o SMS não é marcado como
+"configuração restrita".
+
+1. **Samsung:** desligue o **Bloqueador automático** (Configurações → Segurança e privacidade →
+   Bloqueador automático). Ele recusa apps de fora da loja e também bloqueia o cabo.
+2. Ative as opções do desenvolvedor: Configurações → Sobre o telefone (→ Informações do software,
+   na Samsung) → toque 7 vezes em "Número de compilação" (ou "Número da versão").
+3. Em Configurações → Opções do desenvolvedor, ligue a **Depuração USB**. Na Xiaomi, ligue também
+   "Instalar via USB".
+4. Ligue o cabo no computador, aceite "Permitir depuração USB?" no celular e rode:
+   `adb install -r BotaoVermelho.apk`
+5. Depois, se quiser, desligue a depuração USB e religue o Bloqueador automático. O app continua
+   instalado.
+
 ### Pelo próprio celular
+
+Pode ser recusado ("App não instalado"), principalmente em Samsung com o Bloqueador automático
+ligado e por causa da verificação de desenvolvedor. Nesse caso, use o cabo.
 
 1. Abra o link acima (ou escaneie o QR) **no celular onde o botão vai ficar**. O arquivo
    `BotaoVermelho.apk` é baixado.
@@ -31,20 +51,6 @@ Ou aponte a câmera do celular para o código abaixo:
 3. Se o Android pedir, permita **"instalar apps desta fonte"** para o navegador e volte.
 4. Toque em **Instalar**. Se o Play Protect avisar, toque em **Mais detalhes → Instalar mesmo
    assim**. O aviso aparece porque o app não vem da Play Store.
-
-No Brasil, desde 30/09/2026, o Android 8+ tem a verificação de desenvolvedor. Se a instalação
-for recusada por "desenvolvedor não verificado", use o cabo (abaixo). Também dá para ligar o
-"fluxo avançado" nas opções do desenvolvedor, mas ele exige uma espera de 24 h.
-
-### Pelo cabo USB (sempre funciona)
-
-1. No celular: Configurações → Sobre o telefone → toque 7 vezes em "Número da versão"; depois
-   Opções do desenvolvedor → ligue a "Depuração USB".
-2. Ligue o cabo no computador, aceite o aviso no celular e rode:
-   `adb install -r BotaoVermelho.apk`
-3. Se quiser, desligue a depuração USB depois.
-
-Pelo cabo, o Android também não marca o SMS como "configuração restrita" (veja abaixo).
 
 ## Configurar (uma vez)
 
